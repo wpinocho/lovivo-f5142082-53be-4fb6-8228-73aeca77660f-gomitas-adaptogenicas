@@ -16,32 +16,36 @@ export const NewsletterSection = () => {
   return (
     <HeadlessNewsletter>
       {(logic) => (
-        <section className="bg-muted/30 py-16 border-y">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            {logic.success ? (
-              <div className="space-y-4">
-                <div className="flex justify-center">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <Mail className="h-8 w-8 text-primary" />
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5"></div>
+          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              {logic.success ? (
+                <div className="space-y-6 py-8">
+                  <div className="flex justify-center">
+                    <div className="bg-primary/20 rounded-full p-4">
+                      <Mail className="h-12 w-12 text-primary" />
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  ¡Gracias por suscribirte!
-                </h3>
-                <p className="text-muted-foreground">
-                  Recibirás nuestras mejores ofertas y promociones pronto.
-                </p>
-              </div>
-            ) : (
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-foreground">
-                    ¿Quieres recibir correos promocionales?
+                  <h3 className="text-3xl font-bold text-foreground">
+                    ¡Gracias por unirte! 🎉
                   </h3>
                   <p className="text-lg text-muted-foreground">
-                    Suscríbete a nuestro boletín y obtén ofertas exclusivas
+                    Recibirás nuestras mejores ofertas, consejos de bienestar y novedades de productos.
                   </p>
                 </div>
+              ) : (
+                <div className="space-y-8">
+                  <div className="space-y-4">
+                    <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-2">
+                      <span className="text-sm font-semibold text-primary">Newsletter</span>
+                    </div>
+                    <h3 className="text-4xl font-bold text-foreground">
+                      Únete a la comunidad Bloom 🌸
+                    </h3>
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                      Recibe tips de bienestar, ofertas exclusivas y sé el primero en conocer nuestros nuevos productos
+                    </p>
+                  </div>
                 
                 <form 
                   onSubmit={(e) => {

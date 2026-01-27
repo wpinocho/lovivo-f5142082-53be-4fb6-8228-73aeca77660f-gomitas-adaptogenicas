@@ -19,6 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'sans': ['"DM Sans"', 'system-ui', 'sans-serif'],
 				'dm-sans': ['"DM Sans"', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 				'lato': ['Lato', 'sans-serif'],
